@@ -1,0 +1,16 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+
+
+ENTITY F_ADD is
+   PORT (A,B,C: in std_logic;
+	      Sum,Cout: out std_logic);
+END F_ADD; 
+
+
+ARCHITECTURE a_1 of F_ADD is
+   
+BEGIN
+	 Sum <= A xor B xor C after 400 ps;
+	 Cout <= (A AND B) OR (B AND C) OR (C AND A) after 400 ps;
+END a_1;

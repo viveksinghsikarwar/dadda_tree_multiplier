@@ -1,0 +1,14 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+
+ENTITY H_ADD is
+   PORT(A,B: in std_logic;
+        Sum,Cout: out std_logic);
+END H_ADD;
+
+
+ARCHITECTURE a_1 of H_ADD is
+BEGIN
+    Sum <= A xor B after 200 ps;
+	 Cout <= A and B after 250 ps;
+END a_1;
